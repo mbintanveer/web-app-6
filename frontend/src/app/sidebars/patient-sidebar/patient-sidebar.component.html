@@ -1,0 +1,59 @@
+<body>
+    <h1 class="h">Hospital <br> Management<br>System</h1>
+    <img class="img" src="assets/img.jpg">
+  </body>   
+    
+    <div class="sidebar">
+        <div class="logo-content">
+          <div class="logo">
+            <i class='bx bxl-c-plus-plus'></i>
+            <div class="logo_name"></div>
+          </div>
+          <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+          <li>
+            <!-- <i class='bx bx-search'></i>
+            <input type="text" placeholder="Search...">
+            <span class="tooltip">Search</span> -->
+            <h4 style="color: aliceblue;" >HMS</h4>
+          </li>
+          <li>
+            <a href="components/home">
+              <i class='bx bx-grid-alt'></i>
+              <span class="links_name">Home</span>
+            </a>
+            <span class="tooltip">Home</span>
+          </li>
+          <li>
+            <a href="headers/patient-header">
+              <i class='bx bx-user'></i>
+              <span class="links_name">Patient</span>
+            </a>
+            <span class="tooltip">Patient</span>
+          </li>
+          
+          <li>
+            <a href="">
+              <i class='bx bx-log-out'></i>
+              <span class="links_name">Log Out</span>
+            </a>
+            <span class="tooltip">Log Out</span>
+        </li>  
+        </ul>
+      
+          <script>
+            let sidebar = document.querySelector(".sidebar");
+            let btn = document.querySelector("#btn");
+            let searchBtn = document.querySelector(".bx-search");
+      
+            btn.onclick = function () {
+              sidebar.classList.toggle("active");
+            }
+      
+            searchBtn.onclick = function () {
+              sidebar.classList.toggle("active");
+            }
+          </script>
+
+

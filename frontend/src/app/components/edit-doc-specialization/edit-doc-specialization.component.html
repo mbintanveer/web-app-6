@@ -1,0 +1,32 @@
+<app-admin-header></app-admin-header>
+<br> <br>
+<div class="regForm">
+    <h2>
+      Edit Doctor Specializations
+    </h2>
+</div>
+<br>
+<div *ngIf="alert" class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>Deleted</strong> Successfully!
+  <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<table class="table table-hovered">
+    <thead>
+      <tr>
+        
+        <th scope="col">Doctor ID</th>
+        <th scope="col">Specialization ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor= "let doc_specialization of readDoc_SpecializationData">
+        <th scope="row">{{doc_specialization.DocId}}</th>    
+        <td>{{doc_specialization.SpecId}}</td>    
+        <td><a [routerLink]="['/components/create-doc-specialization',doc_specialization.DocId,doc_specialization.SpecId]">Edit</a></td>
+        <td><button (click)="deleteDoc_Specialization(doc_specialization)" class="btn btn-danger">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>

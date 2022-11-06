@@ -1,0 +1,73 @@
+<app-admin-header></app-admin-header>
+<br> <br>
+<div class="regForm">
+    <h2>
+        Add Doctor
+    </h2>
+</div>
+<div class="mane">
+    <div id="name">
+    <form [formGroup]="doctorForm">
+        
+
+            <h2 class="name">Doctor ID</h2>
+            <input class="docId" type="number" formControlName="docId" placeholder="Enter Doctor ID">
+
+            <h2 class="name">Doctor Name</h2>
+            <input class="firstname" type="text" formControlName="DocName" placeholder="Enter Doctor Name">
+
+       <!--      <h2 class="name">Password</h2>
+            <input class="number" type="password" formControlName="password" placeholder="Enter Password"> -->
+
+
+            <h2 class="name">Address</h2>
+            <input class="address" type="text" formControlName="Address" placeholder="Enter Full Address">
+
+            <h2 class="name">Phone</h2>
+            <input class="number" type="text" formControlName="PhNo" placeholder="Enter Mobile Number">
+
+
+            <h2 class="name">Age</h2>
+            <input class="number" type="text" formControlName="Age" placeholder="Enter Age">
+
+
+
+
+            <!--   <!--   <h2 class="name">Subject</h2>
+            <select class="option" name="subject">
+                <option disabled="disabled" selected="selected">--Choose Option</option>
+                <option value="">Subject 2</option>
+                <option value="">Subject 3</option>
+                <option value="">Subject 3</option>
+            </select> -->
+
+            <h2 class="name">Gender</h2>
+            <input class="number" type="text" formControlName="Gender" placeholder="Enter Gender">
+                   
+               
+            <h2 class="name">Department ID</h2>
+            <input class="number" type="number" formControlName="DepId" placeholder="Enter Department ID">
+
+            <div class="col-lg-6 mt-2" *ngIf="!getparamid" (click)="SubmitData()">
+                <button class="btn btn-dark btn-sm">Submit</button>
+            </div>
+
+            <div class="col-lg-6 mt-2" *ngIf="getparamid" (click)="UpdateData()">
+                <button class="btn btn-primary btn-sm">Update</button>
+            </div>
+
+            <br><br>
+            <!-- show errormsg -->
+            <div *ngIf="errormsg" class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>{{errormsg}}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div *ngIf="successmsg" class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>{{successmsg}}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+       
+    </form>
+    
+</div>
+</div>

@@ -1,0 +1,43 @@
+<app-admin-header></app-admin-header>
+<br> <br>
+<div class="regForm">
+    <h2>
+        Add Medicine
+    </h2>
+</div>
+<div class="mane">
+
+    <form [formGroup]="medicineForm">
+        <div id="name">
+
+            <h2 class="name">Medicine ID</h2>
+            <input class="docId" type="number" formControlName="MID" placeholder="Enter Medicine Id">
+
+            <h2 class="name">Medicine Name</h2>
+            <input class="firstname" type="text" formControlName="MedName" placeholder="Enter Medicine name">
+
+
+            <br> <br>
+            <div class="col-lg-6 mt-2" *ngIf="!getparamid" (click)="SubmitData()">
+                <a  class="btn">Submit</a>
+                <br><br>
+               
+            </div>
+
+            <div class="col-lg-6 mt-2" *ngIf="getparamid" (click)="UpdateData()">
+                <button class="btn btn-primary btn-sm">Update</button>
+            </div>
+
+            <br><br>
+            <!-- show errormsg -->
+            <div *ngIf="errormsg" class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>{{errormsg}}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div *ngIf="successmsg" class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>{{successmsg}}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+    </form>
+</div>

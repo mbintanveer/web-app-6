@@ -1,0 +1,24 @@
+<app-doctor-header></app-doctor-header>
+<br> <br>
+<div class="regForm">
+    <h2 class = "h">
+         Departments
+    </h2>
+</div>
+<br>
+<table class="table table-hovered">
+    <thead>
+      <tr>
+        <th scope="col">Department ID</th>
+        <th scope="col">Department Name</th>
+        <th scope="col">Department Location</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor= "let department of readDepartmentData">
+        <th scope="row">{{department.DepId}}</th>
+        <td>{{department.Dname}}</td> 
+        <td>{{department.Location}}</td>   
+      </tr>
+    </tbody>
+  </table>

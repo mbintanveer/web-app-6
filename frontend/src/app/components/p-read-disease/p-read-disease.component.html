@@ -1,0 +1,25 @@
+<app-patient-header></app-patient-header>
+<br> <br>
+<div class="regForm">
+    <h2 class="h">
+        Diseases
+    </h2>
+</div>
+<br>
+<table class="table table-hovered">
+    <thead>
+      <tr>
+        
+        <th scope="col">Disease ID</th>
+        <th scope="col">Disease Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor= "let disease of readDiseaseData">
+       
+        <th scope="row">{{disease.Did}}</th>    
+        <td>{{disease.Dname}}</td>    
+
+      </tr>
+    </tbody>
+  </table>

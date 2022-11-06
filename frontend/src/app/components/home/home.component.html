@@ -1,0 +1,129 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<body>
+  <app-admin-sidebar></app-admin-sidebar>
+
+  <div class="content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+
+      <!-- Icon Cards-->
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-2 mt-4">
+            <div class="inforide">
+              <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-4 rideone">
+                    <!-- <img src="https://vignette.wikia.nocookie.net/nationstates/images/2/29/WS_Logo.png/revision/latest?cb=20080507063620"> -->
+                </div>
+                <div class="col-lg-9 col-md-8 col-sm-8 col-8 fontsty">
+                    <h4>Total Doctors</h4>
+                    <h2 *ngFor= "let us of DocCount">{{us.DocCounter}}</h2>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-2 mt-4">
+            <div class="inforide">
+              <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-4 ridetwo">
+                    <!-- <img src="https://vignette.wikia.nocookie.net/nationstates/images/2/29/WS_Logo.png/revision/latest?cb=20080507063620"> -->
+                </div>
+                <div class="col-lg-9 col-md-8 col-sm-8 col-8 fontsty">
+                    <h4>Total Patients</h4>
+                    <h2 *ngFor= "let us1 of PatientCount">{{us1.PatientCounter}}</h2>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-2 mt-4">
+            <div class="inforide">
+              <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-4 ridethree">
+                    <!-- <img src="https://vignette.wikia.nocookie.net/nationstates/images/2/29/WS_Logo.png/revision/latest?cb=20080507063620"> -->
+                </div>
+                <div class="col-lg-9 col-md-8 col-sm-8 col-8 fontsty">
+                    <h4>Total Appointments</h4>
+                    <h2 *ngFor= "let us2 of AppointmentCount">{{us2.AppointmentsCounter}}</h2>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-2 mt-4">
+            <div class="inforide">
+              <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-4 ridethree">
+                    <!-- <img src="https://vignette.wikia.nocookie.net/nationstates/images/2/29/WS_Logo.png/revision/latest?cb=20080507063620"> -->
+                </div>
+                <div class="col-lg-9 col-md-8 col-sm-8 col-8 fontsty">
+                    <h4>Total Departments</h4>
+                    <h2 *ngFor= "let us3 of DepCount">{{us3.DepCounter}}</h2>
+                </div>
+              </div>
+            </div>
+
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-2 mt-4">
+            <div class="inforide">
+              <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-4 rideone">
+                    <!-- <img src="https://vignette.wikia.nocookie.net/nationstates/images/2/29/WS_Logo.png/revision/latest?cb=20080507063620"> -->
+                </div>
+                <div class="col-lg-9 col-md-8 col-sm-8 col-8 fontsty">
+                    <h4>Total Diagnostics</h4>
+                    <h2 *ngFor= "let us4 of DiagnoseCount">{{us4.DiagnoseCounter}}</h2>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-2 mt-4">
+            <div class="inforide">
+              <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-4 ridetwo">
+                    <!-- <img src="https://vignette.wikia.nocookie.net/nationstates/images/2/29/WS_Logo.png/revision/latest?cb=20080507063620"> -->
+                </div>
+                <div class="col-lg-9 col-md-8 col-sm-8 col-8 fontsty">
+                    <h4>Total Diseases</h4>
+                    <h2 *ngFor= "let us5 of DiseaseCount">{{us5.DiseaseCounter}}</h2>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-2 mt-4">
+            <div class="inforide">
+              <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-4 ridethree">
+                    <!-- <img src="https://vignette.wikia.nocookie.net/nationstates/images/2/29/WS_Logo.png/revision/latest?cb=20080507063620"> -->
+                </div>
+                <div class="col-lg-9 col-md-8 col-sm-8 col-8 fontsty">
+                    <h4>Total Medicines</h4>
+                    <h2 *ngFor= "let us6 of MedicineCount">{{us6.MedicineCounter}}</h2>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-2 mt-4">
+            <div class="inforide">
+              <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-4 ridethree">
+                    <!-- <img src="https://vignette.wikia.nocookie.net/nationstates/images/2/29/WS_Logo.png/revision/latest?cb=20080507063620"> -->
+                </div>
+                <div class="col-lg-9 col-md-8 col-sm-8 col-8 fontsty">
+                    <h4>Specializations</h4>
+                    <h2 *ngFor= "let us7 of SpecializationCount">{{us7.SpecializationCounter}}</h2>
+                </div>
+              </div>
+            </div>
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+</body>

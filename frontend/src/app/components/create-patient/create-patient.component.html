@@ -1,0 +1,67 @@
+<app-admin-header></app-admin-header>
+<br> <br>
+<div class="regForm">
+    <h2>
+        Add Patient
+    </h2>
+</div>
+<div class="mane">
+
+    <form [formGroup]="patientForm">
+        <div id="name">
+            <h2>
+                <h2 class="name">Patient ID</h2>
+                <input class="docId" type="number" formControlName="PID" placeholder="Enter Patient ID">
+
+                <h2 class="name">Patient Name</h2>
+                <input class="firstname" type="text" formControlName="PName" placeholder="Enter Patient Name">
+            </h2>
+
+            
+            <h2 class="name">Address</h2>
+            <input class="address" type="text" formControlName="Address" placeholder="Enter Full Address">
+
+            <h2 class="name">Phone</h2>
+            <input class="number" type="number" formControlName="PhNo" placeholder="Enter Mobile Number">
+
+
+            <h2 class="name">Age</h2>
+            <input class="number" type="number" formControlName="Age" placeholder="Enter Age">
+
+
+
+
+            <!--   <!--   <h2 class="name">Subject</h2>
+            <select class="option" name="subject">
+                <option disabled="disabled" selected="selected">--Choose Option</option>
+                <option value="">Subject 2</option>
+                <option value="">Subject 3</option>
+                <option value="">Subject 3</option>
+            </select> -->
+
+            <h2 class="name">Gender</h2>
+            <input class="number" type="text" formControlName="Gender" placeholder="Enter Gender">
+            <br> 
+
+            <div class="col-lg-6 mt-2" *ngIf="!getparamid" (click)="SubmitData()">
+                <button class="btn btn-dark btn-sm">Submit</button>
+            </div>
+
+            <div class="col-lg-6 mt-2" *ngIf="getparamid" (click)="UpdateData()">
+                <button class="btn btn-primary btn-sm">Update</button>
+            </div>
+            <br><br>
+            <!-- show errormsg -->
+            <div *ngIf="errormsg" class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>{{errormsg}}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div *ngIf="successmsg" class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>{{successmsg}}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+    </form>
+
+
+</div>

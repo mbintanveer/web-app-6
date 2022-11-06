@@ -1,0 +1,27 @@
+<app-admin-header></app-admin-header>
+<br> <br>
+<div class="regForm">
+    <h2 class = "h">
+         Appointments
+    </h2>
+</div>
+<br>
+<table class="table table-hovered">
+    <thead>
+      <tr>
+        <th scope="col">Appointment ID</th>
+        <th scope="col">Appointment Time</th>
+        <th scope="col">Patient ID</th>
+        <th scope="col">Doctor ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor= "let appointment of readAppointmentData">
+        <th scope="row">{{appointment.AppointmentId}}</th>
+        <td>{{appointment.AppointTime}}</td>
+        <td>{{appointment.PID}}</td>    
+        <td>{{appointment.DocId}}</td>  
+
+      </tr>
+    </tbody>
+  </table>

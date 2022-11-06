@@ -1,0 +1,26 @@
+<app-admin-header></app-admin-header>
+<br> <br>
+<div class="regForm">
+  <h2 class = "h">
+    Prescriptions
+  </h2>
+</div>
+<br>
+<table class="table table-hovered">
+  <thead>
+    <tr>
+      <th scope="col">Prescription ID</th>
+      <th scope="col">Disease ID</th>
+      <th scope="col">Appointment ID</th>
+      <th scope="col">Medicine ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let prescription of readPrescriptionData">
+      <th scope="row">{{prescription.PresId}}</th>
+      <td>{{prescription.Did}}</td>
+      <td>{{prescription.AppointmentId}}</td>
+      <td>{{prescription.MID}}</td>
+    </tr>
+  </tbody>
+</table>

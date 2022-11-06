@@ -1,0 +1,35 @@
+<app-admin-header></app-admin-header>
+<br> <br>
+<div class="regForm">
+    <h2>
+    Edit Prescriptions
+    </h2>
+</div>
+<br>
+<div *ngIf="alert" class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>Deleted</strong> Successfully!
+  <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<table class="table table-hovered">
+    <thead>
+      <tr>
+        <th scope="col">Prescription ID</th>
+        <th scope="col">Disease ID</th>
+        <th scope="col">Appointment ID</th>
+        <th scope="col">Medicine ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prescription of readPrescriptionData">
+        <th scope="row">{{prescription.PresId}}</th>
+        <td>{{prescription.Did}}</td>
+        <td>{{prescription.AppointmentId}}</td>
+        <td>{{prescription.MID}}</td>
+        <td><a [routerLink]="['/components/create-prescription',prescription.PresId]">Edit</a></td>
+        <td><button (click)="deletePrescription(prescription)" class="btn btn-danger">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>

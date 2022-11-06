@@ -1,0 +1,48 @@
+<body>
+
+  <div class="login-box">
+	<form  >
+  <h1>SignUp</h1>
+  <div class="textbox">
+    <label>Id</label>
+    <input type="number" formControlName="PID" placeholder="Enter ID">
+  </div>
+
+  <div class="textbox">
+    <label>Name</label>
+    <input  type="text" formControlName="PName" placeholder="Enter Name">
+  </div>
+  
+  <div class="textbox">
+    <label>Password</label>
+    <input type="password" formControlName="password" placeholder="Enter Password">
+  </div>
+
+
+  <div class="textbox">
+    <label>Address</label>
+    <input  type="text" formControlName="Address" placeholder="Enter Address">
+  </div>
+
+  <div class="textbox">
+    <label>Phone No</label>
+    <input  type="number" formControlName="PhNo" placeholder="Enter Mobile Number">
+  </div>
+
+  <div class="textbox">
+    <label>Age</label>
+    <input type="number" formControlName="Age" placeholder="Enter Age">
+  </div>
+
+  <div class="textbox">
+    <label>Gender</label>
+    <input type="text" formControlName="Gender" placeholder="Enter Gender">
+  </div>
+  
+
+
+  <button (click)="SubmitData()" type="button" class="btn">Sign Up</button>
+  <a href="logins/login"  class="btn">Sign In</a> 
+  </form>
+</div> 
+</body>

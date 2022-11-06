@@ -1,0 +1,30 @@
+<app-doctor-header></app-doctor-header>
+<br> <br>
+<div class="regForm">
+    <h2 class = "h">
+       Patients
+    </h2>
+</div>
+<br>
+<table class="table table-hovered">
+    <thead>
+      <tr>
+        <th scope="col">Patient ID</th>
+        <th scope="col">Patient Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Address</th>
+        <th scope="col">PhoneNo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor= "let patient of readPatientData">
+        <th scope="row">{{patient.PID}}</th>
+        <td>{{patient.PName}}</td>
+        <td>{{patient.Age}}</td>
+        <td>{{patient.Gender}}</td>
+        <td>{{patient.Address}}</td>
+        <td>{{patient.PhNo}}</td>
+      </tr>
+    </tbody>
+  </table>

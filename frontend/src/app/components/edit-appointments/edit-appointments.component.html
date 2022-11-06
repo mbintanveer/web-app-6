@@ -1,0 +1,41 @@
+<app-admin-header></app-admin-header>
+<br> <br>
+<div class="regForm">
+  <h2>
+    Edit Appointments
+  </h2>
+</div>
+<br>
+<br>
+<div *ngIf="alert" class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>Deleted</strong> Successfully!
+  <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<table class="table table-hovered">
+  <thead>
+    <tr>
+      <th scope="col">Appointment ID</th>
+      <th scope="col">Appointment Time</th>
+      <th scope="col">Patient ID</th>
+      <th scope="col">Doctor ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let appointment of readAppointmentData">
+      <th scope="row">{{appointment.AppointmentId}}</th>
+      <td>{{appointment.AppointTime}}</td>
+      <td>{{appointment.PID}}</td>
+      <td>{{appointment.DocId}}</td>
+
+           
+      
+      <!--  <button mat-icon-button><mat-icon (click)="editAppointments()" color="primary">edit</mat-icon></button>
+      <button mat-icon-button><mat-icon (click)="deleteAppointments(appointment)" color="warn">delete</mat-icon></button>  -->
+       <td><button (click)="deleteAppointments(appointment.AppointmentId)"class='bx bxs-delete-alt bx-tada bx-rotate-90'>Delete</button>
+        <a [routerLink]="['/components/create-appointments',appointment.AppointmentId]" class="btn btn-sm btn-success">Edit</a> 
+      </td> 
+    </tr>
+  </tbody>
+</table>

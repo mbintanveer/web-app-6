@@ -1,0 +1,23 @@
+<app-doctor-header></app-doctor-header>
+
+<br> <br>
+<div class="regForm">
+    <h2 class = "h">
+        Specializations
+    </h2>
+</div>
+<br>
+<table class="table table-hovered">
+    <thead>
+      <tr>
+        <th scope="col">Specialization ID</th>
+        <th scope="col">Specialization Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor= "let specialization of readSpecializationData">
+        <th scope="row">{{specialization.SpecId}}</th>
+        <td>{{specialization.SpecDesc}}</td>
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,24 @@
+<app-doctor-header></app-doctor-header>
+<br> <br>
+<div class="regForm">
+    <h2 class = "h">
+        Medicines
+    </h2>
+</div>
+<br>
+<table class="table table-hovered">
+    <thead>
+      <tr>
+        <th scope="col">Medicine ID</th>
+        <th scope="col">Medicine Name</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor= "let medicine of readMedicineData">
+        <th scope="row">{{medicine.MID}}</th>    
+        <td>{{medicine.MedName}}</td>    
+
+      </tr>
+    </tbody>
+  </table>

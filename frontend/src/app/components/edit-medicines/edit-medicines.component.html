@@ -1,0 +1,31 @@
+<app-admin-header></app-admin-header>
+<br> <br>
+<div class="regForm">
+    <h2>
+       Edit Medicines
+    </h2>
+</div>
+<br>
+<div *ngIf="alert" class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>Deleted</strong> Successfully!
+  <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<table class="table table-hovered">
+    <thead>
+      <tr>
+        <th scope="col">Medicine ID</th>
+        <th scope="col">Medicine Name</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor= "let medicine of readMedicineData">
+        <th scope="row">{{medicine.MID}}</th>    
+        <td>{{medicine.MedName}}</td>  
+        <td><a [routerLink]="['/components/create-medicines',medicine.MID]">Edit</a></td>
+        <td><button (click)="deleteMedicine(medicine)" class="btn btn-danger">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
